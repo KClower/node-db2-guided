@@ -1,12 +1,14 @@
-const knex = require('knex')
+// const knex = require('knex')
 
-const db = knex({
-  client: 'sqlite3',
-  connection: {
-    filename: './data/produce.db3'
-  },
-  useNullAsDefault: true
-});
+// const db = knex({
+//   client: 'sqlite3', // database driver
+//   connection: {
+//     filename: './data/produce.db3' // from the root folder
+//   },
+//   useNullAsDefault: true // used for SQLite only
+// });
+
+const db = require('../../data/db_config.js');
 
 function getAll() {
   return db('fruits');
